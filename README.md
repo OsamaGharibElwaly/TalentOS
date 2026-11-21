@@ -22,6 +22,8 @@ Real browser captures from the seeded `org-1` demo workspace. No illustration wa
 
 The first screen explains the workspace in HR language, offers a guided tour and shows the live hiring snapshot: roles, people, interviews, offers and candidate stages.
 
+All captures are **viewport-sized loaded-state shots** — the browser waited until every loading label and skeleton disappeared. No full-page dumps, so the sidebar and active content stay clear.
+
 ---
 
 ## Stage 1 in one picture
