@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "talentos"
+version = "0.1.0"
+description = "TalentOS - AI-powered HR system (Phase 1 foundation)"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110",
+    "pydantic>=2.6",
+    "uvicorn>=0.27",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "mypy>=1.9"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true
+files = ["app", "tests"]

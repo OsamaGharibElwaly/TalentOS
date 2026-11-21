@@ -1,0 +1,46 @@
+# Default: only `app` starts, using local SQLite/filesystem adapters.
+# Optional infrastructure is gated behind the `infra` profile and starts only
+# when explicitly requested with: docker compose --profile infra up
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      TALENTOS_DATA_DIR: /data
+      TALENTOS_DB_PATH: /data/talentos.db
+      TALENTOS_STORAGE_DIR: /data/storage
+      TALENTOS_INDEX_PATH: /data/hybrid_index.json
+      TALENTOS_INFERENCE_BACKEND: offline
+      TALENTOS_MAX_BATCH_SIZE: "50"
+    volumes:
+      - talentos-data:/data
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    profiles: ["infra"]
+    environment:
+      POSTGRES_DB: talentos
+      POSTGRES_USER: talentos
+      POSTGRES_PASSWORD: talentos-local-only
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    profiles: ["infra"]
+
+  minio:
+    image: minio/minio:latest
+    profiles: ["infra"]
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: talentos
+      MINIO_ROOT_PASSWORD: talentos-local-only
+    volumes:
+      - minio-data:/data
+
+volumes:
+  talentos-data:
+  postgres-data:
+  minio-data:

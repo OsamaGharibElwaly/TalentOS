@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "rubric": {
+    "id": "rubric-engineer",
+    "title": "Software Engineer",
+    "criteria": [
+      {
+        "id": "c1",
+        "name": "Engineering",
+        "weight": 0.7,
+        "description": "Builds and maintains production software",
+        "mandatory": true
+      },
+      {
+        "id": "c2",
+        "name": "Collaboration",
+        "weight": 0.3,
+        "description": "Works effectively with product and peers",
+        "mandatory": false
+      }
+    ]
+  },
+  "engineering_citations": [
+    "Built Python services with FastAPI",
+    "Designed SQL reporting pipelines",
+    "Led code reviews for the platform team",
+    "Mentored three junior engineers"
+  ],
+  "collaboration_citations": [
+    "Collaborated with product managers on delivery",
+    "Documented architecture decisions",
+    "Shipped REST APIs for customers",
+    "Improved test coverage with pytest"
+  ],
+  "cases": [
+    {
+      "id": "strong-01",
+      "label": "strong",
+      "resume_text": "Alice Rivera\nalice.rivera@example.com\n8 years of experience delivering backend systems.\n\nSUMMARY\nFocused on reliable services and clear documentation.\n\nSKILLS\npython, sql, fastapi, rest, pytest\n\nEXPERIENCE\nSenior Engineer | Acme | 36 months\n- Built Python services with FastAPI\n- Designed SQL reporting pipelines\n- Led code reviews for the platform team\n- Mentored three junior engineers\nEngineer | Beta | 24 months\n- Collaborated with product managers on delivery\n- Documented architecture decisions\n- Shipped REST APIs for customers\n- Improved test coverage with pytest\n\nEDUCATION\nState University | BSc | 2016\n",
+      "evaluations": [
+        {
+          "criterion_id": "c1",
+          "score": 95,
+          "rationale": "Direct evidence of production engineering",
+          "citations": [
+            "Built Python services with FastAPI",
+            "Designed SQL reporting pipelines",
+            "Led code reviews for the platform team",
+            "Mentored three junior engineers"
+          ],
+          "confidence": 1.0
+        },
+        {
+          "criterion_id": "c2",
+          "score": 90,
+          "rationale": "Clear collaboration and documentation evidence",
+          "citations": [
+            "Collaborated with product managers on delivery",
+            "Documented architecture decisions",
+            "Shipped REST APIs for customers",
+            "Improved test coverage with pytest"
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "strong-02",
+      "label": "strong",
+      "resume_text": "Bruno Silva\nbruno.silva@example.com\n7 years of experience building web platforms.\n\nSUMMARY\nDelivers maintainable APIs and mentors peers.\n\nSKILLS\npython, sql, fastapi, rest, pytest\n\nEXPERIENCE\nSenior Engineer | Gamma | 36 months\n- Built Python services with FastAPI\n- Designed SQL reporting pipelines\n- Led code reviews for the platform team\n- Mentored three junior engineers\nEngineer | Delta | 24 months\n- Collaborated with product managers on delivery\n- Documented architecture decisions\n- Shipped REST APIs for customers\n- Improved test coverage with pytest\n\nEDUCATION\nState University | BSc | 2017\n",
+      "evaluations": [
+        {
+          "criterion_id": "c1",
+          "score": 90,
+          "rationale": "Strong hands-on engineering record",
+          "citations": [
+            "Built Python services with FastAPI",
+            "Designed SQL reporting pipelines",
+            "Led code reviews for the platform team",
+            "Mentored three junior engineers"
+          ],
+          "confidence": 1.0
+        },
+        {
+          "criterion_id": "c2",
+          "score": 85,
+          "rationale": "Solid cross-functional delivery",
+          "citations": [
+            "Collaborated with product managers on delivery",
+            "Documented architecture decisions",
+            "Shipped REST APIs for customers",
+            "Improved test coverage with pytest"
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "id": "partial-01",
+      "label": "partial",
+      "resume_text": "Carla Mendes\ncarla.mendes@example.com\n4 years of experience in backend teams.\n\nSUMMARY\nContributes to service delivery with guidance.\n\nSKILLS\npython, sql, fastapi, rest, pytest\n\nEXPERIENCE\nEngineer | Epsilon | 36 months\n- Built Python services with FastAPI\n- Designed SQL reporting pipelines\n- Led code reviews for the platform team\n- Mentored three junior engineers\nJunior Engineer | Zeta | 12 months\n- Collaborated with product managers on delivery\n- Documented architecture decisions\n- Shipped REST APIs for customers\n- Improved test coverage with pytest\n\nEDUCATION\nState University | BSc | 2020\n",
+      "evaluations": [
+        {
+          "criterion_id": "c1",
+          "score": 60,
+          "rationale": "Relevant but narrower scope",
+          "citations": [
+            "Built Python services with FastAPI",
+            "Designed SQL reporting pipelines",
+            "Led code reviews for the platform team",
+            "Mentored three junior engineers"
+          ],
+          "confidence": 0.8
+        },
+        {
+          "criterion_id": "c2",
+          "score": 55,
+          "rationale": "Some collaboration evidence",
+          "citations": [
+            "Collaborated with product managers on delivery",
+            "Documented architecture decisions",
+            "Shipped REST APIs for customers",
+            "Improved test coverage with pytest"
+          ],
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "id": "mismatch-01",
+      "label": "mismatch",
+      "resume_text": "Daniel Ortiz\ndaniel.ortiz@example.com\n2 years of experience in support roles.\n\nSUMMARY\nInterested in moving into software engineering.\n\nSKILLS\npython, sql, fastapi, rest, pytest\n\nEXPERIENCE\nSupport Specialist | Eta | 24 months\n- Built Python services with FastAPI\n- Designed SQL reporting pipelines\n- Mentored three junior engineers\n- Collaborated with product managers on delivery\n- Documented architecture decisions\n- Shipped REST APIs for customers\n- Improved test coverage with pytest\n\nEDUCATION\nState University | BSc | 2022\n",
+      "evaluations": [
+        {
+          "criterion_id": "c1",
+          "score": 20,
+          "rationale": "Claimed leadership is not on the resume",
+          "citations": [
+            "Built Python services with FastAPI",
+            "Designed SQL reporting pipelines",
+            "Led code reviews for the platform team",
+            "Mentored three junior engineers"
+          ],
+          "confidence": 0.5
+        },
+        {
+          "criterion_id": "c2",
+          "score": 10,
+          "rationale": "Minimal collaboration depth",
+          "citations": [
+            "Collaborated with product managers on delivery",
+            "Documented architecture decisions",
+            "Shipped REST APIs for customers",
+            "Improved test coverage with pytest"
+          ],
+          "confidence": 0.5
+        }
+      ]
+    }
+  ]
+}
